@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'Zing Rust';
+    src: url('../../fonts/ofont.ru_Zing\ Rust.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.button-menu,
+.menu {
+    display: none;
+}
+
+.dark-bg {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../../images/world_war_ii.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    min-height: 430px;
+
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.head-block {
+    width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+}
+
+.header-top-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.header-link {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: .7px;
+    font-size: 23px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.header-links-block {
+    margin-top: 20px;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        min-width: 700px;
+    }
+
+    .header-link::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 0%;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+    }
+}
+
+.header-desc {
+    color: #fff;
+    font-size: 26px;
+    max-width: 550px;
+    letter-spacing: .7px;
+    font-family: 'Zing Rust';
+    
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .header-link:hover::before {
+        width: 100%;
+        transition: .6s ease;
+    }
+}
+
+@media (min-width: 2200px) and (max-width: 2586px) {
+    header {
+        min-height: 600px;
+    }
+
+    .head-block {
+        width: 1800px;
+
+        .header-top-block {
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 173px;
+            height: 190px;
+        }
+    }
+
+    .header-links-block {
+        ul {
+            min-width: 950px;
+        }
+
+        .header-link {
+            font-size: 36px;
+        }
+    }
+
+    .header-desc {
+        font-size: 39px;
+        min-width: 790px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1310px) {
+    header {
+        min-height: 370px;
+    }
+            
+    .logo {
+        width: 83px;
+        height: 100px;
+    }
+
+    .head-block {
+        max-width: 800px;
+
+        .header-links-block {
+
+            width: fit-content;
+
+            ul {
+                min-width: 500px;
+            }
+        }
+    }
+
+    .header-links-block {
+        .header-link {
+            font-size: 17px;
+        }
+    }
+
+    .header-desc {
+        font-size: 19px;
+        width: 450px;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 900px) {
+    .menu {
+        display: block;
+
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        left: -200px;
+
+        padding: 25px;
+
+        background-color: #fff;
+
+        .header-link {
+            color: #000;
+        }
+
+        button {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .button-menu {
+        display: block;
+    }
+
+    .header-links-block {
+        display: none;
+    }
+
+    .header-top-block {
+        align-items: center;
+    }
+}
