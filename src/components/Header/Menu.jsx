@@ -1,7 +1,15 @@
+import MenuContext from "../contexts/headerContexts/MenuContext";
+import { useContext } from "react";
+import MenuCloseSVG from './MenuCloseSVG'
+
 const Menu = () => {
+    const { isOpen, toggle } = useContext(MenuContext)
+
     return (
-        <nav className="menu">
-            <button>Close</button>
+        <nav className={`menu ${isOpen ? 'open' : ''}`}>
+            <button onClick={toggle}>
+                <MenuCloseSVG />
+            </button>
             <ul>
                 <li>
                     <a href="/" className="header-link">

@@ -43,6 +43,7 @@ header {
     justify-content: space-around;
     align-items: flex-start;
     width: 100%;
+    position: relative;
 }
 
 .header-link {
@@ -124,18 +125,18 @@ header {
     }
 }
 
-@media (min-width: 900px) and (max-width: 1310px) {
+@media (min-width: 768px) and (max-width: 1310px) {
     header {
         min-height: 370px;
     }
-            
+
     .logo {
         width: 83px;
         height: 100px;
     }
 
     .head-block {
-        max-width: 800px;
+        max-width: 700px;
 
         .header-links-block {
 
@@ -159,9 +160,10 @@ header {
     }
 }
 
-@media (min-width: 425px) and (max-width: 900px) {
+@media (min-width: 320px) and (max-width: 769px) {
     .menu {
         display: block;
+        z-index: 3;
 
         position: absolute;
         height: 100vh;
@@ -172,23 +174,39 @@ header {
 
         background-color: #fff;
 
+        transition: .8s ease-in-out;
+
         .header-link {
             color: #000;
         }
 
         button {
             margin-bottom: 20px;
+            background: transparent;
+            border: none;
         }
+    }
 
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu.open {
+        transform: translateX(200px);
     }
 
     .button-menu {
         display: block;
+
+        transition: .2s;
+        background: transparent;
+        border: none;
+    }
+
+    .head-block {
+        padding: 20px;
     }
 
     .header-links-block {
@@ -196,6 +214,24 @@ header {
     }
 
     .header-top-block {
-        align-items: center;
+        align-items: start;
+    }
+
+    .header-desc {
+        font-size: 19px;
+        max-width: 400px;
+        margin-left: 20px;
+    }
+
+    .background-menu.open {
+        background-color: #000;
+        opacity: .5;
+        z-index: 2;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        transition: .2s;
+        top: 0;
+        left: 0;
     }
 }
