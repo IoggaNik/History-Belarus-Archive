@@ -27,6 +27,8 @@ header {
     display: flex;
     justify-content: center;
     z-index: 2;
+
+    box-shadow: 0 0 50px 10px #000 ;
 }
 
 .head-block {
