@@ -1,0 +1,11 @@
+import styled from 'styled-components';
+
+export default {
+    SectionMap: styled.section`
+        padding: 40px 0 40px 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    `,
+};

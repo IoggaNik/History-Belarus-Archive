@@ -1,0 +1,10 @@
+.map {
+    width: 70vw;
+    height: 70vh;
+
+    justify-self: center;
+}
+
+.heading {
+    margin-left: 40px;
+}
