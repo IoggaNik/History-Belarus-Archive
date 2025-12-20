@@ -9,6 +9,10 @@ export default {
     Section: styled.section`
         display: flex;
         flex-direction: column;
+        border-bottom: 1px solid #5f5f5fff;
+        width: 95%;
+        margin: 0 auto;
+        padding-bottom: 20px;
     `,
     PictureHero: styled.img`
         width: 340px;
