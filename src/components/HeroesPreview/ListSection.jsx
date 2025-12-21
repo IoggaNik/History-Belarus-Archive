@@ -1,4 +1,4 @@
-import heroesData from '../../../../heroes_data.json';
+import heroesData from '../../heroes_data.json';
 import PreviewStyled from './Preview.styled';
 import styles from './SectionStyle.module.css';
 

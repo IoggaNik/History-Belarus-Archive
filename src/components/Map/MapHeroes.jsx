@@ -29,7 +29,7 @@ const MapHeroes = () => {
     return (
         <MapView.SectionMap>
             <h1>Карта</h1>
-            <div>
+            <div style={{ width: 'fit-content', margin: '0 auto' }}>
                 <YMaps
                     query={{
                         apikey: '409f1973-3a82-47cb-ab41-4260217bfa9b',
