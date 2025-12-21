@@ -1,11 +1,33 @@
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps'
 import MapView from './MapView.styled'
 
+import heroesData from '../../heroes_data.json'
+
 import styles from './MapStyle.module.css'
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import FormContext from '../contexts/formContexts/FormContext';
+
+const replaceE = (str) => {
+    if (!str) return '';
+    return str
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, ' ')
+        .replace(/ё/g, 'е')
+        .replace(/Ё/g, 'Е');
+};
+
+const findHero = (arr, str) => {
+    return arr.find((obj) => replaceE(obj.fullName) === replaceE(str));
+};
 
 const MapHeroes = () => {
+    const { fullName } = useContext(FormContext);
+
+    const hero = findHero(heroesData, fullName);
+
+    const { lat, lng } = hero?.coordinates || {}; 
+
     const [zoom, setZoom] = useState(() => {
         if (window.innerWidth <= 610) return 5;
         if (window.innerWidth >= 1200) return 7;
@@ -23,7 +45,7 @@ const MapHeroes = () => {
         }
 
         window.addEventListener('resize', handleResize);
-        return () => removeEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     return (
@@ -43,7 +65,9 @@ const MapHeroes = () => {
                             'control.FullscreenControl',
                         ]}
                         className={styles.map}
-                    ></Map>
+                    >
+                        {(lat && lng) && <Placemark geometry={[lat, lng]} />}
+                    </Map>
                 </YMaps>
             </div>
         </MapView.SectionMap>
