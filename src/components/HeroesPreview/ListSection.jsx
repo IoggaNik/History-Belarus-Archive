@@ -8,12 +8,12 @@ const ListSection = () => {
     return (
         <PreviewStyled.List className={list}>
             {heroesData.map(
-                ({ id, photoUrl, fullName, biography }, index) =>
+                ({ id, photoUrl, fullName, rank }, index) =>
                     index < 6 && (
                         <PreviewStyled.HeroCard key={id} className={heroCard}>
                             <PreviewStyled.PictureHero src={photoUrl} />
                             <h1>{fullName}</h1>
-                            <p>{biography}</p>
+                            <p>{rank}</p>
                         </PreviewStyled.HeroCard>
                     )
             )}

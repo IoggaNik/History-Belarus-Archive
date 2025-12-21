@@ -28,7 +28,7 @@ const MapHeroes = () => {
 
     return (
         <MapView.SectionMap>
-            <h1>Карта</h1>
+            <h1 className={styles.heading}>Карта</h1>
             <div>
                 <YMaps
                     query={{
