@@ -26,18 +26,21 @@ const FormFound = () => {
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Имя"
                 name="first-name"
+                className={styles.names_inp}
             />
             <input
                 type="text"
                 onChange={(e) => setSurname(e.target.value)}
                 placeholder="Фамилия"
                 name="surname"
+                className={styles.names_inp}
             />
             <input
                 type="text"
                 onChange={(e) => setLastSurname(e.target.value)}
                 placeholder="Отчество"
                 name="last-surname"
+                className={styles.names_inp}
             />
 
             <button onClick={handleSearch}>Найти</button>
