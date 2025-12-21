@@ -7,5 +7,9 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 40px;
+
+        border-bottom: 1px solid #5f5f5fff;
+        width: 95%;
+        margin: 0 auto;
     `,
 };
