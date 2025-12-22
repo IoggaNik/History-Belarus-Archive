@@ -3,6 +3,7 @@ import styles from 'styled-components';
 export const MainSection = styles.section`
     padding: 20px 0 20px 0;
     margin-top: 20px;
+    padding-bottom: 70px;
 `;
 
 export const ContainerForms = styles.div`
