@@ -19,7 +19,9 @@ const MainForm = () => {
                     <FormFound />
                 </BlockForm>
                 <BlockForm>
+                    <HeadindBlock style={{ backgroundColor: '#63143bff' }}>
                         <h1>Добавить героя</h1>
+                    </HeadindBlock>
                     <FormAdd />
                 </BlockForm>
             </ContainerForms>

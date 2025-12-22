@@ -1,49 +1,31 @@
-import { useState } from 'react';
-import { Found } from '../FormsStyled.styled.js';
-import styles from '../FormStyle.module.css';
-import { useContext } from 'react';
+import { ButtonForm, Found, Input } from '../FormsStyled.styled.js';
+import { useContext, useState } from 'react';
 import FormContext from '../../contexts/formContexts/FormContext.js';
 
 const FormFound = () => {
-    const [name, setName] = useState('');
-    const [surname, setSurname] = useState('');
-    const [lastSurname, setLastSurname] = useState('');
-
+    const [f_name, set_f_name] = useState('');
     const { setFullName } = useContext(FormContext);
 
     const handleSearch = e => {
         e.preventDefault();
 
-        const full = `${surname} ${name} ${lastSurname}`.trim();
+        if (!f_name.length) return;
 
-        setFullName(full);
+        set_f_name('');
+        setFullName(f_name);
     };
 
     return (
         <Found>
-            <input
+            <Input
                 type="text"
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Имя"
-                name="first-name"
-                className={styles.names_inp}
+                name="fullName"
+                value={f_name}
+                onChange={e => set_f_name(e.target.value)}
+                placeholder='ФИО'
+                autoComplete="off"
             />
-            <input
-                type="text"
-                onChange={(e) => setSurname(e.target.value)}
-                placeholder="Фамилия"
-                name="surname"
-                className={styles.names_inp}
-            />
-            <input
-                type="text"
-                onChange={(e) => setLastSurname(e.target.value)}
-                placeholder="Отчество"
-                name="last-surname"
-                className={styles.names_inp}
-            />
-
-            <button onClick={handleSearch}>Найти</button>
+            <ButtonForm onClick={handleSearch}>Найти</ButtonForm>
         </Found>
     );
 };
