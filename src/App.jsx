@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Section from "./components/HeroesPreview/Section";
 import MapHeroes from "./components/Map/MapHeroes";
 import FormContext from './components/contexts/formContexts/FormContext'
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
     const [fullName, setFullName] = useState('');
@@ -14,6 +15,7 @@ const App = () => {
             <Section />
             <MapHeroes />
             <MainForm />
+            <Footer />
         </FormContext.Provider>
     );
 };
