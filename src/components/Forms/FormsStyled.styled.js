@@ -67,6 +67,11 @@ export const Found = styles.form`
     @media (min-width: 320px) and (max-width: 425px) {
         padding: 20px 20px 30px 20px;
         width: 220px;
+
+        input {
+            width: 150px;
+            font-size: 10px;
+        }
     }
 `;
 
