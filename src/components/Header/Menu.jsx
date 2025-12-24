@@ -1,6 +1,7 @@
 import MenuContext from "../contexts/headerContexts/MenuContext";
 import { useContext } from "react";
 import MenuCloseSVG from './MenuCloseSVG'
+import { Link } from "react-router-dom";
 
 const Menu = () => {
     const { isOpen, toggle } = useContext(MenuContext)
@@ -12,22 +13,22 @@ const Menu = () => {
             </button>
             <ul>
                 <li>
-                    <a href="/" className="header-link">
+                    <Link to="/" className="header-link">
                         Главная
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/" className="header-link">
+                    <Link to="archive" className="header-link">
                         Архив
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/" className="header-link">
+                    <Link to="/" className="header-link">
                         Информация
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/" className="header-link">
+                    <a onClick={toggle} href="#contacts" className="header-link">
                         Контакты
                     </a>
                 </li>

@@ -16,7 +16,7 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <Foot>
+        <Foot id='contacts'>
             <Container>
                 <Information>
                     <Logo src={logo} />
@@ -32,7 +32,7 @@ const Footer = () => {
                                 <InfoLink href="/">Контактные данные</InfoLink>
                             </InfoLi>
                             <InfoLi>
-                                Сайт создан участником для показа технического творчества.
+                                <p>Сайт создан участником для показа технического творчества.</p>
                             </InfoLi>
                         </ContactsList>
                     </div>

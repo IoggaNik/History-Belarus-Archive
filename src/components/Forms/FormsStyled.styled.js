@@ -28,7 +28,6 @@ export const BlockForm = styles.div`
 `;
 
 export const HeadindBlock = styles.div`
-    // border: 1px solid #000;
     color: #fff;
     background-color: #105332ff;
     width: fit-content;
@@ -36,8 +35,10 @@ export const HeadindBlock = styles.div`
     font-size: 14px;
     border-radius: 35px 35px 0 0;
 
-    @media (min-width: 320px) and (max-width: 400px) {
-        font-size: 10px;
+    @media (min-width: 320px) and (max-width: 475px) {
+        h1 {
+            font-size: 17px;
+        }
     }
 
     @media (min-width: 1600px) and (max-width: 2586px) {
@@ -55,14 +56,17 @@ export const Found = styles.form`
     padding: 20px 40px 30px 40px;
     border-radius: 15px;
     box-shadow: 0 12px 20px 2px #000;
+    width: 310px;
 
     @media (min-width: 1600px) and (max-width: 2586px) {
         padding: 50px 110px 50px 110px;
         gap: 30px;
+        width: 460px;
     }
 
-    @media (min-width: 320px) and (max-width: 400px) {
+    @media (min-width: 320px) and (max-width: 425px) {
         padding: 20px 20px 30px 20px;
+        width: 220px;
     }
 `;
 
@@ -74,12 +78,12 @@ export const Add = styles.form`
     background-color: #3b0c23ff;
     border-radius: 15px;
     gap: 20px;
-    width: 315px;
+    width: 350px;
     box-shadow: 0 12px 20px 2px #000;
 
     @media (min-width: 1600px) and (max-width: 2586px) {
         padding: 50px 110px 50px 70px;
-        width: 470px;
+        width: 530px;
         gap: 30px;
     }
 

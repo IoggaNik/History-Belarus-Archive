@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ListSection from './ListSection';
 import PreviewStyled from './Preview.styled';
 import Styled from './Preview.styled';
@@ -10,11 +11,10 @@ const Section = () => {
             <Styled.ListHeroes>
                 <ListSection />
             </Styled.ListHeroes>
-            <br />
             <div className={styles.blockLink}>
-                <a href="/" className={styles.linkArchive}>
+                <Link to="archive" className={styles.linkArchive}>
                     Смотреть ещё...
-                </a>
+                </Link>
             </div>
             <div>
                 <PreviewStyled.Description className={styles.desc}>

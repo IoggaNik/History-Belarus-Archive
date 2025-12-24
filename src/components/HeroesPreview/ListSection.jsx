@@ -7,16 +7,15 @@ const ListSection = () => {
 
     return (
         <PreviewStyled.List className={list}>
-            {heroesData.map(
-                ({ id, photoUrl, fullName, rank }, index) =>
-                    index < 6 && (
-                        <PreviewStyled.HeroCard key={id} className={heroCard}>
-                            <PreviewStyled.PictureHero src={photoUrl} />
-                            <h1>{fullName}</h1>
-                            <p>{rank}</p>
-                        </PreviewStyled.HeroCard>
-                    )
-            )}
+            {heroesData
+                .slice(0, 6)
+                .map(({ id, photoUrl, fullName, rank }) => (
+                    <PreviewStyled.HeroCard key={id} className={heroCard}>
+                        <PreviewStyled.PictureHero src={photoUrl} />
+                        <h1>{fullName}</h1>
+                        <p>{rank}</p>
+                    </PreviewStyled.HeroCard>
+                ))}
         </PreviewStyled.List>
     );
 };

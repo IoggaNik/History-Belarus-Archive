@@ -11,6 +11,12 @@ export const Foot = styles.footer`
     justify-content: center;
     flex-direction: column;
     gap: 40px;
+
+    @media (min-width: 320px) and (max-width: 475px) {
+        p {
+            font-size: 14px;
+        }
+    }
 `;
 
 export const Container = styles.div`
@@ -31,6 +37,12 @@ export const Information = styles.div`
     display: flex;
     align-items: flex-start;
     gap: 30px;
+
+    @media (min-width: 320px) and (max-width: 475px) {
+        h2 {
+            font-size: 19px;
+        }
+    }
 
     @media (min-width: 320px) and (max-width: 425px) {
         flex-direction: column;
@@ -79,6 +91,12 @@ export const InfoLi = styles.li`
 
     color: #fff;
     font-size: 21px;
+
+    @media (min-width: 320px) and (max-width: 475px) {
+        p {
+            text-align: center;
+        }
+    }
 `;
 
 export const InfoLink = styles.a`

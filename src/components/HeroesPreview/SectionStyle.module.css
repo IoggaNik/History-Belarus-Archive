@@ -16,6 +16,7 @@
 .blockLink {
     align-self: flex-end;
 }
+
 @media (min-width: 2000px) and (max-width: 2586px) {
     .heroCard img {
         width: 440px;
@@ -46,11 +47,11 @@
 
 @media (min-width: 1440px) and (max-width: 1999px) {
     .heroCard h1 {
-        font-size: 23px;
+        font-size: 21px;
     }
 
     .heroCard p {
-        font-size: 30px;
+        font-size: 24px;
     }
 
     .desc {
@@ -65,13 +66,13 @@
 
 @media (min-width: 1024px) and (max-width: 1439px) {
     .heroCard img {
-        width: 250px;
-        height: 340px;
+        width: 200px;
+        height: 290px;
     }
 
     .heroCard p,
     .heroCard h1 {
-        font-size: 19px;
+        font-size: 16px;
     }
 
     .desc {
@@ -84,19 +85,19 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1025px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .list {
         padding: 0 20px 0 20px;
     }
 
     .heroCard img {
-        width: 200px;
-        height: 270px;
+        width: 150px;
+        height: 210px;
     }
 
     .heroCard p,
     .heroCard h1 {
-        font-size: 13px;
+        font-size: 11px;
     }
 
     .linkArchive {
@@ -105,7 +106,7 @@
     }
 }
 
-@media (min-width: 425px) and (max-width: 767px) {
+@media (min-width: 530px) and (max-width: 767px) {
     .list {
         grid-template-columns: repeat(2, minmax(150px, 1fr)) !important;
         padding: 0 5px 0 5px;
@@ -127,7 +128,7 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 424px) {
+@media (min-width: 320px) and (max-width: 580px) {
     .list {
         grid-template-columns: 250px !important;
         width: fit-content;
@@ -145,7 +146,7 @@
 
     .heroCard p,
     .heroCard h1 {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .linkArchive {

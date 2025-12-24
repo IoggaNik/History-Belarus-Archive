@@ -3,4 +3,18 @@
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+a {
+    font-family: system-ui, -apple-system, sans-serif;
 }

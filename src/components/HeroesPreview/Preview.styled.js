@@ -15,19 +15,19 @@ export default {
         padding-bottom: 20px;
     `,
     PictureHero: styled.img`
-        width: 340px;
-        height: 450px;
+        width: 300px;
+        height: 410px;
     `,
     List: styled.div`
         display: grid;
         grid-template-columns: repeat(3, minmax(200px, 1fr));
-        gap: 50px;
+        row-gap: 50px;
     `,
     HeroCard: styled.article`
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
     `,
     Description: styled.p`
         color: #5f5f5fff;
