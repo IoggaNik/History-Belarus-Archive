@@ -22,7 +22,7 @@ const Cards = ({ newSortArray, staticData, onDelete }) => {
                                     <img className={photo} src={photoUrl} />
                                 </div>
                                 <div className={h_descCont}>
-                                    <h3>{fullName} {id}</h3>
+                                    <h3>{fullName}</h3>
                                     <div className={descContainer}>
                                         <p>
                                             {rank.length
