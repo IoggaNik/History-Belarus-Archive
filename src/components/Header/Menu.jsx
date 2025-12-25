@@ -1,11 +1,11 @@
-import MenuContext from "../contexts/headerContexts/MenuContext";
-import { useContext } from "react";
-import MenuCloseSVG from './MenuCloseSVG'
-import { Link } from "react-router-dom";
+import MenuContext from '../contexts/headerContexts/MenuContext';
+import { useContext } from 'react';
+import MenuCloseSVG from './MenuCloseSVG';
+import { Link } from 'react-router-dom';
+import { handleScroll } from '../functions/handleScroll.js';
 
 const Menu = () => {
-    const { isOpen, toggle } = useContext(MenuContext)
-
+    const { isOpen, toggle } = useContext(MenuContext);
     return (
         <nav className={`menu ${isOpen ? 'open' : ''}`}>
             <button onClick={toggle}>
@@ -13,7 +13,7 @@ const Menu = () => {
             </button>
             <ul>
                 <li>
-                    <Link to="/" className="header-link">
+                    <Link to="/" onClick={toggle} className="header-link">
                         Главная
                     </Link>
                 </li>
@@ -23,14 +23,28 @@ const Menu = () => {
                     </Link>
                 </li>
                 <li>
-                    <a to="#contacts" className="header-link">
+                    <Link
+                        onClick={() => {
+                            toggle()
+                            handleScroll('contacts')
+                        }}
+                        to="/"
+                        className="header-link"
+                    >
                         Информация
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a onClick={toggle} href="#contacts" className="header-link">
+                    <Link
+                        onClick={() => {
+                            toggle();
+                            handleScroll('contacts');
+                        }}
+                        href=""
+                        className="header-link"
+                    >
                         Контакты
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </nav>
