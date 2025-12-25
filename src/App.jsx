@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import MainForm from './components/Forms/MainForm';
 import Header from './components/Header/Header';
@@ -15,7 +15,7 @@ const App = () => {
 
     return (
         <>
-            <Router basename="/History-Belarus-Archive/">
+            <Router>
                 <FormContext.Provider value={{ fullName, setFullName }}>
                     <ScrollToTop />
                     <Routes>
