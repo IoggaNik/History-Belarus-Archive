@@ -30,7 +30,7 @@ const Cards = ({ newSortArray, staticData, onDelete }) => {
                                                 : 'Звание: Неизвестно'}
                                         </p>
                                         <p>{biography.substring(0, 100)}...</p>
-                                        <a href={wikiPage}>Подробнее...</a>
+                                        <a target='_blank' href={wikiPage}>Подробнее...</a>
                                     </div>
                                 </div>
                             </div>

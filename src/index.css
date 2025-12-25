@@ -7,6 +7,10 @@
     line-height: 1.6;
 }
 
+.no-smooth-scroll {
+    scroll-behavior: auto !important;
+}
+
 html {
     scroll-behavior: smooth;
 }

@@ -1,4 +1,4 @@
-import logo80 from '../../images/80.png'
+import logo80 from '../../images/logo-header-80.png'
 
 const Logo = () => {
     return (

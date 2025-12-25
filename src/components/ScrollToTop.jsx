@@ -1,14 +1,22 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+    const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]); 
+    useEffect(() => {
+        const html = document.documentElement;
 
-  return null;
+        html.classList.add('no-smooth-scroll');
+
+        window.scrollTo(0, 0);
+
+        requestAnimationFrame(() => {
+            html.classList.remove('no-smooth-scroll');
+        });
+    }, [pathname]);
+
+    return null;
 };
 
 export default ScrollToTop;

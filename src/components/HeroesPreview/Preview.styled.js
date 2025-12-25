@@ -11,7 +11,7 @@ export default {
         flex-direction: column;
         border-bottom: 1px solid #5f5f5fff;
         width: 95%; 
-        max-width: 2500px; /* Снимаем ограничения, чтобы карточки могли быть огромными на 4К */
+        max-width: 2500px;
         margin: 0 auto;
         padding-bottom: 40px;
     `,
@@ -21,11 +21,10 @@ export default {
         aspect-ratio: 3 / 4; 
         object-fit: cover;
         border-radius: 4px;
-        max-width: 440px; /* Базовый размер фото из твоего 4К медиа */
+        max-width: 440px;
     `,
     List: styled.div`
         display: grid;
-        /* Разрешаем карточкам расти до 600px на огромных экранах */
         grid-template-columns: repeat(3, minmax(250px, 600px)); 
         justify-content: center; 
         gap: 60px 40px;
@@ -44,7 +43,7 @@ export default {
                     0 10px 15px -6px rgba(0, 0, 0, 0.15);
         transition: transform 0.3s ease;
         width: 100%;
-        max-width: 600px; /* Чтобы карточка не была бесконечно широкой */
+        max-width: 600px;
         box-sizing: border-box;
 
         h1 {
@@ -61,8 +60,10 @@ export default {
             margin: 0;
         }
 
-        &:hover {
-            transform: translateY(-10px);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                transform: translateY(-10px);
+            }
         }
     `,
     Description: styled.p`

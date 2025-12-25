@@ -2,6 +2,7 @@ import styles from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Foot = styles.footer`
+    position: relative;
     width: 100%;
     min-height: 375px;
     background-color: #222d1eff;

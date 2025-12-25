@@ -19,7 +19,7 @@ const Header = () => {
             <MenuContext.Provider value={value}>
                 <Background />
                 <div className="dark-bg">
-                    <header>
+                    <header id='main-head'>
                         <div className="head-block">
                             <Menu />
                             <HeaderTopBlock />

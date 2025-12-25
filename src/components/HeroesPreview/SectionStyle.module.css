@@ -18,11 +18,31 @@
     align-self: flex-end;
 }
 
+.more_details_link {
+    text-decoration: none;
+    border: 4px solid rgb(0, 166, 255);
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 19px;
+    color: rgb(0, 166, 255);
+    transition: background-color .4s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .more_details_link:hover {
+        background-color: #f1f1f1;
+    }
+}
+
 @media (min-width: 2000px) and (max-width: 2732px) {
     .heroCard img {
         width: 440px;
         height: 570px;
         object-fit: cover;
+    }
+
+    .more_details_link {
+        font-size: 29px;
     }
 
     .textHeadHeroes {
@@ -67,7 +87,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 880px) and (max-width: 1024px) {
     .list {
         padding: 0 20px 0 20px;
     }
@@ -89,7 +109,7 @@
     }
 }
 
-@media (min-width: 530px) and (max-width: 767px) {
+@media (min-width: 530px) and (max-width: 880px) {
     .list {
         grid-template-columns: repeat(2, minmax(150px, 1fr)) !important;
         padding: 0 5px 0 5px;
@@ -137,5 +157,9 @@
     .linkArchive {
         font-size: 14px;
         margin-right: 30px;
+    }
+
+    .more_details_link {
+        font-size: 15px;
     }
 }

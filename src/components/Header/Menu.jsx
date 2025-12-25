@@ -23,9 +23,9 @@ const Menu = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className="header-link">
+                    <a to="#contacts" className="header-link">
                         Информация
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     <a onClick={toggle} href="#contacts" className="header-link">

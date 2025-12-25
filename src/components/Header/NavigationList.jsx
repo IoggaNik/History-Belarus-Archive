@@ -16,9 +16,9 @@ const NavigationList = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/" className="header-link">
+                        <a href="#contacts" className="header-link">
                             Информация
-                        </Link>
+                        </a>
                     </li>
                     <li>
                         <a href='#contacts' className="header-link">
