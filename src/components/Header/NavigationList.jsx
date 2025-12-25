@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
 
 const NavigationList = () => {
+    const handleScroll = () => {
+        const element = document.getElementById('contacts');
+
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <nav className="header-links-block">
@@ -16,14 +24,14 @@ const NavigationList = () => {
                         </Link>
                     </li>
                     <li>
-                        <a href="#contacts" className="header-link">
+                        <Link onClick={handleScroll} to="/" className="header-link">
                             Информация
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href='#contacts' className="header-link">
+                        <Link onClick={handleScroll} to="/" className="header-link">
                             Контакты
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>
