@@ -41,7 +41,7 @@ export const HeadindBlock = styles.div`
         }
     }
 
-    @media (min-width: 1600px) and (max-width: 2586px) {
+    @media (min-width: 1600px) and (max-width: 2732px) {
         padding: 35px 60px;
         font-size: 21px;
     }
@@ -58,8 +58,16 @@ export const Found = styles.form`
     box-shadow: 0 12px 20px 2px #000;
     width: 310px;
 
-    @media (min-width: 1600px) and (max-width: 2586px) {
-        padding: 50px 110px 50px 110px;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 1600px) and (max-width: 2732px) {
+        padding: 50px 110px 50px 70px;
         gap: 30px;
         width: 460px;
     }
@@ -86,7 +94,7 @@ export const Add = styles.form`
     width: 350px;
     box-shadow: 0 12px 20px 2px #000;
 
-    @media (min-width: 1600px) and (max-width: 2586px) {
+    @media (min-width: 1600px) and (max-width: 2732px) {
         padding: 50px 110px 50px 70px;
         width: 530px;
         gap: 30px;
@@ -116,7 +124,7 @@ export const Input = styles.input`
         transform: translateX(5px);
     }
 
-    @media (min-width: 1600px) and (max-width: 2586px) {
+    @media (min-width: 1600px) and (max-width: 2732px) {
         padding: 10px 20px 10px 0;
         font-size: 25px;
     }
@@ -143,7 +151,7 @@ export const ButtonForm = styles.button`
         }
     }
 
-    @media (min-width: 1600px) and (max-width: 2586px) {
+    @media (min-width: 1600px) and (max-width: 2732px) {
         font-size: 29px;
         padding: 20px 30px;
     }
@@ -173,7 +181,7 @@ export const BioTextArea = styles.textarea`
         color: transparent;
     }
 
-    @media (min-width: 1600px) and (max-width: 2586px) {
+    @media (min-width: 1600px) and (max-width: 2732px) {
         // padding: 10px 20px 10px 0;
         font-size: 23px;
         min-height: 200px;
@@ -202,7 +210,7 @@ export const FileLabel = styles.label`
         }
     }
 
-    @media (min-width: 1600px) and (max-width: 2586px) {
+    @media (min-width: 1600px) and (max-width: 2732px) {
         font-size: 28px;
     }
 

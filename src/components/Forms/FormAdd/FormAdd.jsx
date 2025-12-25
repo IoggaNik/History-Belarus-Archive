@@ -145,7 +145,7 @@ const handleSubmit = (e) => {
             />
 
             <FileInput type="file" name="photoUrl" id="photo-upload" />
-            <FileLabel htmlFor="photo-upload">Выберите фото</FileLabel>
+            <FileLabel htmlFor="photo-upload">Выберите фото📎</FileLabel>
 
             <ButtonForm type="submit">Добавить</ButtonForm>
         </Add>

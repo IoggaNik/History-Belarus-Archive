@@ -9,30 +9,35 @@ import {
     Contacts,
     InfoLi,
 } from './FooterStyle.styled.js';
+
 import ContactsListComp from './ContactsListComp.jsx';
-import logo from '../../images/80.png';
+import logo from '../../images/logo-school-wout-bg.png';
+import { divLogo, bgLogo } from './Footer_MS.module.css';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <Foot id='contacts'>
+        <Foot>
             <Container>
                 <Information>
-                    <Logo src={logo} />
+                    <div className={divLogo} >
+                        <div className={bgLogo}></div>
+                        <Logo src={logo} />
+                    </div>
                     <div>
                         <h2 style={{ color: '#fff', textAlign: 'center' }}>
                             «Информационный портал о героях»
                         </h2>
-                        <ContactsList>
+                        <ContactsList id='contacts'>
                             <InfoLi>
-                                <InfoLink href="/">Информация о сайте</InfoLink>
+                                <InfoLink to="/">Информация о сайте</InfoLink>
                             </InfoLi>
                             <InfoLi>
-                                <InfoLink href="/">Контактные данные</InfoLink>
+                                <InfoLink to="/">Контактные данные</InfoLink>
                             </InfoLi>
                             <InfoLi>
-                                <p>Сайт создан участником для показа технического творчества.</p>
+                                <p>Автор: Горелик Никита.</p>
                             </InfoLi>
                         </ContactsList>
                     </div>

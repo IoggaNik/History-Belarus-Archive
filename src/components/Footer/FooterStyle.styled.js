@@ -1,4 +1,5 @@
 import styles from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Foot = styles.footer`
     width: 100%;
@@ -17,6 +18,12 @@ export const Foot = styles.footer`
             font-size: 14px;
         }
     }
+
+    @media (min-width: 1800px) and (max-width: 2732px) {
+        p {
+            font-size: 29px;
+        }
+    }  
 `;
 
 export const Container = styles.div`
@@ -24,13 +31,19 @@ export const Container = styles.div`
     justify-content: space-between;
     align-items: flex-start;
 
-    width: 75%;
+    width: 85%;
 
     @media (min-width: 320px) and (max-width: 1200px) {
         flex-direction: column;
         align-items: center;
         gap: 70px;  
     }
+
+    @media (min-width: 1800px) and (max-width: 2732px) {
+        p {
+            font-size: 31px;
+        }
+    }   
 `;
 
 export const Information = styles.div`
@@ -44,15 +57,27 @@ export const Information = styles.div`
         }
     }
 
-    @media (min-width: 320px) and (max-width: 425px) {
+    @media (min-width: 320px) and (max-width: 1320px) {
         flex-direction: column;
         align-items: center;
+
+        div ul {
+            align-items: center;
+        }
     }
+
+    @media (min-width: 1800px) and (max-width: 2732px) {
+        * {
+            font-size: 29px;
+        }
+    }    
 `;
 
 export const Logo = styles.img`
-    width: 140px;
+    position: relative;
+    width: 290px;
     height: 150px;
+    z-index: 3;
 `;
 
 export const Contacts = styles.div`
@@ -99,7 +124,7 @@ export const InfoLi = styles.li`
     }
 `;
 
-export const InfoLink = styles.a`
+export const InfoLink = styles(Link)`
     color: #fff;
     text-decoration: none;
 

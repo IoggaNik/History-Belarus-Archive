@@ -17,15 +17,17 @@ const FormFound = () => {
 
     return (
         <Found>
-            <Input
-                type="text"
-                name="fullName"
-                value={f_name}
-                onChange={e => set_f_name(e.target.value)}
-                placeholder='ФИО'
-                autoComplete="off"
-            />
-            <ButtonForm onClick={handleSearch}>Найти</ButtonForm>
+            <div>
+                <Input
+                    type="text"
+                    name="fullName"
+                    value={f_name}
+                    onChange={(e) => set_f_name(e.target.value)}
+                    placeholder="ФИО"
+                    autoComplete="off"
+                />
+                <ButtonForm onClick={handleSearch}>Найти</ButtonForm>
+            </div>
         </Found>
     );
 };

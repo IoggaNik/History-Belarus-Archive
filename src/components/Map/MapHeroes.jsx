@@ -71,6 +71,7 @@ const MapHeroes = () => {
                     </Map>
                 </YMaps>
             </div>
+            <p style={{ textAlign: 'center' }}>Найдите место рождения героя на карте. Если его нет в архиве — добавьте данные ниже.</p>
         </MapView.SectionMap>
     );
 };

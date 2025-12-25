@@ -4,9 +4,9 @@ import At from '../src/images/at-sign-svgrepo-com.png';
 import Nav from '../src/images/navigation-arrow-fill-svgrepo-com.png';
 
 const map = new Map([
-    [PhoneCalling, '+375 (29) 325-70-20'],
+    [PhoneCalling, '+375 (17) 514-79-30'],
     [Geo, 'д. Лесковка, ул. Светлая 2Б'],
-    [At, 'nikitagorelik02@gmail.com'],
+    [At, 'bor-sch3@guo.bc.by'],
     [Nav, 'TG: @IoggaNik']
 ]);
 

@@ -7,15 +7,6 @@ import styles from './SectionStyle.module.css';
 const Section = () => {
     return (
         <Styled.Section>
-            <h1 className={styles.textHeadHeroes}>Герои Беларуси</h1>
-            <Styled.ListHeroes>
-                <ListSection />
-            </Styled.ListHeroes>
-            <div className={styles.blockLink}>
-                <Link to="archive" className={styles.linkArchive}>
-                    Смотреть ещё...
-                </Link>
-            </div>
             <div>
                 <PreviewStyled.Description className={styles.desc}>
                     История Беларуси — это прежде всего живое переплетение судеб
@@ -52,6 +43,15 @@ const Section = () => {
                     часть нашего общего национального достояния, которая
                     продолжает определять облик современной Беларуси
                 </PreviewStyled.Description>
+            </div>
+            <h1 className={styles.textHeadHeroes}>Герои СССР Великой Отечественной войны</h1>
+            <Styled.ListHeroes>
+                <ListSection />
+            </Styled.ListHeroes>
+            <div className={styles.blockLink}>
+                <Link to="archive" className={styles.linkArchive}>
+                    Перейти в архив
+                </Link>
             </div>
         </Styled.Section>
     );

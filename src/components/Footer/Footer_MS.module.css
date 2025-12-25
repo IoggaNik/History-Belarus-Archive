@@ -1,0 +1,15 @@
+.divLogo {
+    position: relative;
+}
+
+.bgLogo {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}

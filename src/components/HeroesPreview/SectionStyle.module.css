@@ -1,7 +1,8 @@
 .textHeadHeroes {
-    margin-bottom: -60px;
+    margin-bottom: 40px; 
     margin-top: 40px;
     text-align: center;
+    font-size: clamp(22px, 3vw, 42px);
 }
 
 .linkArchive {
@@ -17,14 +18,16 @@
     align-self: flex-end;
 }
 
-@media (min-width: 2000px) and (max-width: 2586px) {
+@media (min-width: 2000px) and (max-width: 2732px) {
     .heroCard img {
         width: 440px;
         height: 570px;
+        object-fit: cover;
     }
 
     .textHeadHeroes {
-        font-size: 39px;
+        font-size: 48px !important;
+        margin-bottom: 80px !important;
     }
 
     .heroCard p {
@@ -46,42 +49,21 @@
 }
 
 @media (min-width: 1440px) and (max-width: 1999px) {
-    .heroCard h1 {
-        font-size: 21px;
+    .list {
+        max-width: 1300px !important; 
+        margin: 0 auto !important;
     }
 
-    .heroCard p {
-        font-size: 24px;
-    }
-
-    .desc {
-        font-size: 24px;
-    }
-
-    .linkArchive {
-        font-size: 22px;
-        margin-right: 20px;
-    }
+    .heroCard h1 { font-size: 21px; }
+    .heroCard p { font-size: 24px; }
+    .desc { font-size: 24px; }
+    .linkArchive { font-size: 22px; margin-right: 20px; }
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-    .heroCard img {
-        width: 200px;
-        height: 290px;
-    }
-
-    .heroCard p,
-    .heroCard h1 {
-        font-size: 16px;
-    }
-
-    .desc {
-        font-size: 17px;
-    }
-
-    .linkArchive {
-        font-size: 15px;
-        margin-right: 65px;
+    .list {
+        max-width: 1000px !important;
+        margin: 0 auto !important;
     }
 }
 
@@ -93,6 +75,7 @@
     .heroCard img {
         width: 150px;
         height: 210px;
+        object-fit: cover;
     }
 
     .heroCard p,
@@ -115,6 +98,7 @@
     .heroCard img {
         width: 170px;
         height: 220px;
+        object-fit: cover;
     }
 
     .heroCard p,
@@ -142,6 +126,7 @@
     .heroCard img {
         width: 190px;
         height: 260px;
+        object-fit: cover;
     }
 
     .heroCard p,
