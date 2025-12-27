@@ -40,7 +40,7 @@ const Menu = () => {
                             toggle();
                             handleScroll('contacts');
                         }}
-                        href=""
+                        to="/"
                         className="header-link"
                     >
                         Контакты

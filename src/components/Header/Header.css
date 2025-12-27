@@ -234,7 +234,7 @@ header {
         background-color: #000;
         opacity: .5;
         z-index: 2;
-        position: absolute;
+        position: fixed;
         width: 100vw;
         height: 100vh;
         transition: .2s;

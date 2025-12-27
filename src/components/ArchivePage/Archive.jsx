@@ -6,7 +6,7 @@ import {
     headBlock,
     heading,
     backLink,
-    findInput,
+    findInput
 } from './ArchiveStyle.module.css';
 
 import Spinner from './Spinner';
@@ -23,6 +23,15 @@ const Archive = () => {
         return saved ? JSON.parse(saved) : sortedHeroes;
     });
 
+    const handleUpdatePhoto = (id, newPhoto) => {
+        const updated = localHeroes.map((hero) =>
+            hero.id === id ? { ...hero, photoUrl: newPhoto } : hero
+        );
+
+        setLocalHeroes(updated);
+        localStorage.setItem('heroes', JSON.stringify(updated));
+    };
+
     useEffect(() => {
         const saved = localStorage.getItem('heroes');
 
@@ -30,14 +39,14 @@ const Archive = () => {
     }, []);
 
     const handleDelete = (id) => {
-        if (window.confirm("Удалить героя из вашего списка?")) {
-            const updated = localHeroes.filter(hero => hero.id !== id);
+        if (window.confirm('Удалить героя из вашего списка?')) {
+            const updated = localHeroes.filter((hero) => hero.id !== id);
             setLocalHeroes(updated);
             localStorage.setItem('heroes', JSON.stringify(updated));
         }
     };
 
-    const changeSort = localHeroes.filter(hero =>
+    const changeSort = localHeroes.filter((hero) =>
         hero?.fullName?.toLowerCase().includes(findName.toLowerCase())
     );
 
@@ -62,7 +71,12 @@ const Archive = () => {
                         onChange={(e) => setFindName(e.target.value)}
                     />
                     {changeSort.length ? (
-                        <Cards staticData={sortedHeroes} onDelete={handleDelete} newSortArray={changeSort} />
+                        <Cards
+                            onUpdatePhoto={handleUpdatePhoto}
+                            staticData={sortedHeroes}
+                            onDelete={handleDelete}
+                            newSortArray={changeSort}
+                        />
                     ) : (
                         <HeroNotFound />
                     )}

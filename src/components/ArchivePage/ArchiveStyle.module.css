@@ -180,6 +180,11 @@ section {
     margin-top: 10px;
 }
 
+.buttonsContainer {
+    display: flex;
+    gap: 20px;
+}
+
 .buttonDelete {
     align-self: center;
     padding: 20px 40px;
@@ -194,9 +199,48 @@ section {
     transition: background-color .3s ease;
 }
 
+.changePhoto {
+    align-self: center;
+    color: rgb(85, 176, 255) !important;
+    background-color: transparent !important;
+    padding: 20px 40px !important;
+    border: 4px solid rgb(85, 176, 255) !important;
+    font-size: 34px !important;
+}
+
+.showUp {
+    right: 15px;
+    bottom: -100px;
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.closeUp {
+    opacity: 0;
+    bottom: -100px;
+    right: 15px;
+}
+
 @keyframes spin {
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1275px) {
+    .heroCard {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .buttonDelete,
+    .changePhoto {
+        align-self: flex-start;
+    }
+
+    .buttonsContainer {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
@@ -205,9 +249,10 @@ section {
         flex-direction: column;
     }
 
-    .buttonDelete {
-        font-size: 15px;
-        padding: 10px 30px;
+    .buttonDelete,
+    .changePhoto {
+        font-size: 15px !important;
+        padding: 10px 30px !important;
         align-self: flex-start;
     }
 
@@ -223,31 +268,34 @@ section {
 }
 
 @media (min-width: 575px) and (max-width: 769px) {
+    .changePhoto {
+        font-size: 18px !important;
+    }
+
     .heroCard {
         flex-direction: column;
         gap: 40px;
     }
-
-    .buttonDelete {
-        align-self: flex-start;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .buttonDelete {
-        align-self: flex-start;
-    }
-
     .heroCard {
         flex-direction: column;
         gap: 60px;
     }
 }
 
+@media (min-width: 768px) and (max-width: 1700px) {
+    .changePhoto {
+        font-size: 21px !important;
+    }
+}
+
 @media (min-width: 1700px) and (max-width: 2732px) {
-    .buttonDelete {
-        font-size: 38px;
-        padding: 40px 50px;
+    .buttonDelete,
+    .changePhoto {
+        font-size: 38px !important;
+        padding: 40px 50px !important;
     }
 
     .heading {
@@ -296,7 +344,8 @@ section {
         width: 100%;
     }
 
-    .buttonDelete:hover {
-        background-color: rgb(241, 241, 241);
+    .buttonDelete:hover,
+    .changePhoto:hover {
+        background-color: rgb(241, 241, 241) !important;
     }
 }

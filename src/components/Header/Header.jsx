@@ -5,9 +5,12 @@ import Menu from './Menu';
 import MenuContext from '../contexts/headerContexts/MenuContext'
 import { useState } from 'react';
 import Background from './Background';
+import { useLockBodyScroll } from '../hooks/useLockBodyScroll.js'
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    useLockBodyScroll(isOpen);
 
     const value = {
         isOpen,

@@ -70,6 +70,16 @@ const handleSubmit = (e) => {
 
     const photoFile = formData.get('photoUrl');
 
+    if (!photoFile || photoFile.size === 0) {
+        alert('Пожалуйста, выберите фотографию героя!');
+        return;
+    }
+
+    if (photoFile.size > 2 * 1024 * 1024) {
+        alert('Фото слишком тяжелое (макс. 2Мб)');
+        return;
+    }
+
     if (photoFile && photoFile.size > 0) {
         const reader = new FileReader();
         reader.onloadend = () => {
