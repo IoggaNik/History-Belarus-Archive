@@ -1,0 +1,96 @@
+section {
+    position: relative;
+    width: 95%;
+    border-bottom: 1px solid #5f5f5fff;
+}
+
+.containerImages {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.imageWar {
+    width: 320px;
+    height: 230px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btnNext, .btnPrev {
+    position: absolute;
+    top: 42%;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    flex-shrink: 0;
+    transition: 0.3s;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnNext {
+    right: 10px;
+}
+
+.btnPrev {
+    left: 10px;
+}
+
+@media (max-width: 425px) {
+    .btnNext,
+    .btnPrev {
+        width: 30px;
+        height: 30px;
+        top: 44%;
+    }
+
+    .imageWar {
+        width: 220px;
+        height: 160px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .btnNext,
+    .btnPrev {
+        width: 60px;
+        height: 60px;
+        font-size: 38px;
+        top: 41%;
+    }
+
+    .btnNext {
+        right: 0;
+    }
+
+    .btnPrev {
+        left: 0;
+    }
+
+    .imageWar {
+        width: 380px;
+        height: 270px;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .btnNext:hover,
+    .btnPrev:hover {
+        background: #e8e8e8;
+        transform: scale(1.1);
+    }
+}

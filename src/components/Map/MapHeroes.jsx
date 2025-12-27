@@ -23,7 +23,9 @@ const MapHeroes = () => {
             const saved = localStorage.getItem('heroes');
             setHeroes(saved ? JSON.parse(saved) : sortedHeroes);
         };
+
         load();
+
         window.addEventListener('storage', load);
         return () => window.removeEventListener('storage', load);
     }, []);
@@ -49,7 +51,7 @@ const MapHeroes = () => {
     }, []);
 
     return (
-        <MapView.SectionMap>
+        <MapView.SectionMap id='map-search'>
             <h1 className={styles.heading}>Карта</h1>
             <div style={{ width: 'fit-content', margin: '0 auto' }}>
                 <YMaps query={{ apikey: '409f1973-3a82-47cb-ab41-4260217bfa9b', lang: 'ru_RU' }}>

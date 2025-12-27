@@ -2,8 +2,11 @@ import { ButtonForm, Found, Input } from '../FormsStyled.styled.js';
 import { useContext, useState } from 'react';
 import FormContext from '../../contexts/formContexts/FormContext.js';
 
+import { scroller } from 'react-scroll';
+
 const FormFound = () => {
     const [f_name, set_f_name] = useState('');
+
     const { setFullName } = useContext(FormContext);
 
     const handleSearch = e => {
@@ -13,10 +16,17 @@ const FormFound = () => {
 
         set_f_name('');
         setFullName(f_name);
+
+        if (f_name) {
+            scroller.scrollTo('map-search', {
+                duration: 50,
+                smooth: true
+            })
+        }
     };
 
     return (
-        <Found>
+        <Found onSubmit={handleSearch}>
             <div>
                 <Input
                     type="text"
@@ -26,7 +36,7 @@ const FormFound = () => {
                     placeholder="ФИО"
                     autoComplete="off"
                 />
-                <ButtonForm onClick={handleSearch}>Найти</ButtonForm>
+                <ButtonForm>Найти</ButtonForm>
             </div>
         </Found>
     );
